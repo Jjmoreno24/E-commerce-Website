@@ -57,7 +57,7 @@ p{
 }
 .boton{
     display: inline-block;
-    background: #e4582e;
+    background: #c76e4b;
     color: #fff;
     padding: 8px 30px;
     margin: 30px 0;
@@ -108,7 +108,7 @@ p{
 }
 .title::after{
     content: '';
-    background: #ff523b;
+    background: #c76e4b;
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -130,7 +130,7 @@ h4{
 .col-4:hover{
     transform: translateY(-5px);
 }
-/*------ Ofertas ------*/
+/*------------------ Ofertas ------------------*/
 .ofertas{
     background: radial-gradient(#fff,#302a28d7);
     margin-top: 80px;
@@ -142,7 +142,7 @@ h4{
 small{
     color:#555;
 }
-/*------ Opiniones ------*/
+/*------------------ Opiniones ------------------*/
 .opiniones{
     padding-top: 100px;
 }
@@ -163,7 +163,7 @@ small{
 }
 .fa.fa-quote-left{
     font-size: 34px;
-    color: #e4582e;
+    color: #c76e4b;
 }
 .col-3 p{
     font-size: 12px;
@@ -175,7 +175,7 @@ small{
     color: #555;
     font-size: 16px;
 }
-/*------ Marcas ------*/
+/*------------------ Marcas ------------------*/
 .marcas{
     margin: 100px auto;
 }
@@ -191,7 +191,7 @@ small{
     filter: grayscale(0);
 }
 
-/*------ Pie de Pagina ------*/
+/*------------------ Pie de Pagina ------------------*/
 .pie{
     background: #000;
     color: #8a8a8a;
@@ -248,7 +248,7 @@ ul{
     display: none;
 }
 
-/*------ Menu ------*/
+/*------------------ Menu ------------------*/
 @media only screen and (max-width: 800px){
     nav ul{
         position: absolute;
@@ -280,5 +280,175 @@ ul{
     }
     .col-2, .col-3, .col-4{
         flex-basis: 100%;
+    }
+}
+/*------------------ Todos los productos ------------------*/
+
+.row-2{
+    justify-content: space-between;
+    margin: 20px auto 50px;
+}
+select{
+    border: 1px solid #251c1c;
+    padding: 5px;
+}
+select:focus{
+    outline-color: none;
+}
+.page-boton{
+    margin: 0 auto 80px;
+}
+.page-boton span{
+    display: inline-block;
+    border: 1px solid #251c1c;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-boton span:hover{
+    background: #251c1c;
+    color: #ffffff;
+}
+
+/*------------------ Detalle de Producto Solo ------------------*/
+.single-product{
+    margin-top: 80px;
+}
+.single-product .col-2 img{
+    padding: 0;
+}
+.single-product .col-2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+.single-product select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.single-product input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #333;
+}
+.single-product .fa{
+    color: #c76e4b;
+    margin-left: 10px
+}
+input:focus{
+    outline: none;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-icon-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/*------------------ Articulos en el carrito ------------------*/
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #c76e4b;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;  
+}
+td a{
+    color: #c76e4b;
+    font-size: 14px;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+}
+.total table{
+    border-top: 3px solid #c76e4b;
+    width: 100%;
+    max-width: 350px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+
+/*------------------ Log in ------------------*/
+.account-page{
+    padding: 50px 0;
+    background: radial-gradient(#fff,#302a28d7)
+}
+.form-container{
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    color: #555;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    
+}
+
+/*------------------ Tamaños de pantalla inferiores a 600 ------------------*/
+@media only screen and (max-width: 768px){
+    .row{
+        text-align: center;
+    }
+    .col-2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col-2{
+        padding: 20px 0;
+    }
+    .cart-info p{
+        display: none;
     }
 }

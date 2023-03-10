@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in IEMTEC Pma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https:stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Pictures/logo.png" width="325px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Registrate</a></li>
+                    </ul>
+                </nav>
+                <img src="Pictures/cart.png" width="42px" height="42px">
+                <img src="Pictures/menu.png" class="menu-icon" 
+                onclick="menutoggle()">
+            </div>
+        </div>
+
+
+    <!----------------------- Pie de pagina ------------------------>
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="Pictures/image1.png" width="100%">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-boton">
+                            <span>Log in</span>
+                            <span>Registrate</span>
+                        </div>
+                        <form>
+                            <input type="text" placeholder="Usuario">
+                            <input type="password" placeholder="contrasena">
+                            <button type="submit" class="button">Login</button>
+                            <a href="">Olvide la contrasena</a>
+                        </form>
+                        <form>
+                            <input type="text" placeholder="Usuario">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="contrasena">
+                            <button type="submit" class="button">Registrate</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------------- Pie de pagina ------------------------>
+  <div class="pie">
+    <div class="container">
+        <div class="row">
+            <div class="pie-col-1">
+                <h3>Descarga Nuestra App</h3>
+                <p>App disponible para telefono Android y iOS </p>
+                <div class="app-logo">
+                    <img src="Pictures/play-store.png">
+                    <img src="Pictures/app-store.png">
+                </div>
+            </div>
+            <div class="pie-col-2">
+                <img src="Pictures/logo-black.png">
+                <p>Nuestro propósito es hacer que el placer y los beneficios del deporte sean accesibles de forma sostenible para la mayorías</p>
+            </div>
+            <div class="pie-col-3">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li>Cupones</li>
+                    <li>Blogs</li>
+                    <li>Política de Devoluciones</li>
+                    <li>Afiliarse</li>
+                </ul>
+            </div>
+            <div class="pie-col-4">
+                <h3>Siguenos</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instsgram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2023 - First Ecommerce website</p>
+    </div>
+  </div>
+    <!------------------------ Js para menu ------------------------>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+       
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else{
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito IEMTEC Pma</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https:stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="Pictures/logo.png" width="325px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="">Inicio</a></li>
+                        <li><a href="">Productos</a></li>
+                        <li><a href="">Sobre</a></li>
+                        <li><a href="">Contacto</a></li>
+                        <li><a href="">Registrate</a></li>
+                    </ul>
+                </nav>
+                <img src="Pictures/cart.png" width="42px" height="42px">
+                <img src="Pictures/menu.png" class="menu-icon" 
+                onclick="menutoggle()">
+            </div>
+        </div>
+  <!----------------------- Productos en el carrito ------------------------>
+  <div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Productos</th>
+            <th>Cantidad</th>
+            <th>Total</th>
+        </tr>
+            <tr>
+                <td>
+                     <div class="cart-info">
+                        <img src="Pictures/buy-1.jpg">
+                        <div>
+                            <p>Sweter Rojo Estampado Puma</p>
+                            <small>Precio: 50.00</small>
+                            <br>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$50.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                     <div class="cart-info">
+                        <img src="Pictures/buy-2.jpg">
+                        <div>
+                            <p>Zapatillas Negras HrX</p>
+                            <small>Precio: 65.00</small>
+                            <br>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$65.00</td>
+            </tr>
+
+            <tr>
+                <td>
+                     <div class="cart-info">
+                        <img src="Pictures/buy-3.jpg">
+                        <div>
+                            <p>Pantalon Gris Jogger</p>
+                            <small>Precio: 28.00</small>
+                            <br>
+                            <a href="">Eliminar</a>
+                        </div>
+                    </div>
+                </td>
+                <td><input type="number" value="1"></td>
+                <td>$28.00</td>
+            </tr>
+    </table>
+    <div class="total">
+        <table>
+            <tr>
+                <td>SubTotal</td>
+                <td>$138.00</td>
+            </tr>
+            <tr>
+                <td>Impuesto</td>
+                <td>$9.66</td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td>$147.66</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+
+  <!----------------------- Pie de pagina ------------------------>
+  <div class="pie">
+    <div class="container">
+        <div class="row">
+            <div class="pie-col-1">
+                <h3>Descarga Nuestra App</h3>
+                <p>App disponible para telefono Android y iOS </p>
+                <div class="app-logo">
+                    <img src="Pictures/play-store.png">
+                    <img src="Pictures/app-store.png">
+                </div>
+            </div>
+            <div class="pie-col-2">
+                <img src="Pictures/logo-black.png">
+                <p>Nuestro propósito es hacer que el placer y los beneficios del deporte sean accesibles de forma sostenible para la mayorías</p>
+            </div>
+            <div class="pie-col-3">
+                <h3>Enlaces</h3>
+                <ul>
+                    <li>Cupones</li>
+                    <li>Blogs</li>
+                    <li>Política de Devoluciones</li>
+                    <li>Afiliarse</li>
+                </ul>
+            </div>
+            <div class="pie-col-4">
+                <h3>Siguenos</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instsgram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="Copyright">Copyright 2023 - First Ecommerce website</p>
+    </div>
+  </div>
+    <!------------------------ Js para menu ------------------------>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+       
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else{
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    
+</body>
+</html>
