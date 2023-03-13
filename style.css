@@ -25,7 +25,7 @@ nav ul li{
 }
 a{
     text-decoration: none;
-    color: #555;
+    color: #000000;
 }
 p{
     color:#555;
@@ -243,7 +243,7 @@ ul{
     text-align: center;
 }
 .menu-icon{
-    width: 38px;
+    width: 28px;
     margin-left: 20px;
     display: none;
 }
@@ -501,4 +501,13 @@ form a{
     .cart-info p{
         display: none;
     }
+}
+
+/*------------------ About ------------------*/
+h3 p{
+    color: #0f0f0f;
+}
+row_{
+    width: 50px;
+    padding: 78px 0;
 }
