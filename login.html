@@ -29,32 +29,36 @@
             </div>
         </div>
 
-
-    <!----------------------- Pie de pagina ------------------------>
-    <div class="account-page">
+    <!----------------------- Ventana Log in ------------------------>
+    <div class="login">
         <div class="container">
             <div class="row">
                 <div class="col-2">
                     <img src="Pictures/image1.png" width="100%">
                 </div>
+
                 <div class="col-2">
                     <div class="form-container">
                         <div class="form-boton">
-                            <span>Log in</span>
-                            <span>Registrate</span>
+                            <span onclick="login()">Login</span>
+                            <span onclick="resgistrate()">Resgistrate</span>
+                            <hr id="Indicador">
                         </div>
-                        <form>
-                            <input type="text" placeholder="Usuario">
-                            <input type="password" placeholder="contrasena">
-                            <button type="submit" class="button">Login</button>
-                            <a href="">Olvide la contrasena</a>
+
+                        <form id="LoginForm">
+                          <input type="text" placeholder="Nombre de Usuario">
+                          <input type="password" placeholder="Contraseña">
+                          <button type="submit" class="boton">Login</button>
+                          <a href="">Olvide mi contrasena</a>
                         </form>
-                        <form>
-                            <input type="text" placeholder="Usuario">
-                            <input type="email" placeholder="Email">
-                            <input type="password" placeholder="contrasena">
-                            <button type="submit" class="button">Registrate</button>
-                        </form>
+                        
+                        <form id="RegisForm">
+                            <input type="text" placeholder="NombreUsuario">
+                            <input type="email" placeholder="Correo">
+                            <input type="password" placeholder="Contraseña">
+                            <button type="submit" class="boton">Registrate</button>
+                          </form>
+
                     </div>
                 </div>
             </div>
@@ -115,6 +119,26 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
+    </script>
+
+    <!------------------------ Js para para el formulario de cambio ------------------------>
+    <script>
+
+        var LoginForm = document.getElementById("LoginForm");
+        var RegisForm = document.getElementById("RegisForm");
+        var Indicador = document.getElementById("Indicador");
+
+            function resgistrate(){
+                RegisForm.style.transform = "translateX(0px)";
+                LoginForm.style.transform = "translateX(0px)";
+                Indicador.style.transform = "translateX(100px)";
+            }
+
+            function login(){
+                RegisForm.style.transform = "translateX(300px)";
+                LoginForm.style.transform = "translateX(300px)";
+                Indicador.style.transform = "translateX(0px)";
+            }
     </script>
     
 </body>
