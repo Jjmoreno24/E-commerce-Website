@@ -7,4 +7,14 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
 
-Enlace para visitar la Web: https://jjmoreno24.github.io/E-commerce-Website/
+## 🌐 Enlace en vivo
+👉 [E-commerce - IEMTEC](https://jjmoreno24.github.io/E-commerce-Website/)
+
+## 🧾 Descripción del proyecto
+Este proyecto es una maqueta de un sitio web de comercio electrónico, diseñado completamente con **HTML5** y **CSS3**. Representa una tienda moderna con diseño atractivo y estructura clara, ideal como base para una tienda funcional más adelante.
+
+## ✨ Características
+- Página principal con productos destacados  
+- Diseño responsive (adaptable a distintos tamaños de pantalla)  
+- Uso de tarjetas visuales para presentación de productos  
+- Navegación simple e intuitiva  
