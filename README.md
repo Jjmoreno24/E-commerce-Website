@@ -8,7 +8,7 @@
 
 
 ## 🌐 Enlace en vivo
-👉 [E-commerce - IEMTEC](https://jjmoreno24.github.io/E-commerce-Website/)
+👆🏼 [E-commerce - IEMTEC](https://jjmoreno24.github.io/E-commerce-Website/)
 
 ## 🧾 Descripción del proyecto
 Este proyecto es una maqueta de un sitio web de comercio electrónico, diseñado completamente con **HTML5** y **CSS3**. Representa una tienda moderna con diseño atractivo y estructura clara, ideal como base para una tienda funcional más adelante.
