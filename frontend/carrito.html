@@ -6,144 +6,114 @@
     <title>Carrito IEMTEC Pma</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https:stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
 </head>
 <body>
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                    <<a href="index.html"><img src="Pictures/logo.png" width="325px"></a>
-                </div>
-                <nav>
-                    <ul id="MenuItems">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="">Conocenos</a></li>
-                        <li><a href="login.html">Registrate</a></li>
-                    </ul>
-                </nav>
-                <a href="carrito.html"><img src="Pictures/cart.png" width="42px" height="42px"></a>
-                <img src="Pictures/menu.png" class="menu-icon" 
-                onclick="menutoggle()">
-            </div>
-        </div>
-  <!----------------------- Productos en el carrito ------------------------>
-  <div class="small-container cart-page">
-    <table>
-        <tr>
-            <th>Productos</th>
-            <th>Cantidad</th>
-            <th>Total</th>
-        </tr>
-            <tr>
-                <td>
-                     <div class="cart-info">
-                        <img src="Pictures/buy-1.jpg">
-                        <div>
-                            <p>Sweter Rojo Estampado Puma</p>
-                            <small>Precio: 50.00</small>
-                            <br>
-                            <a href="">Eliminar</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$50.00</td>
-            </tr>
-
-            <tr>
-                <td>
-                     <div class="cart-info">
-                        <img src="Pictures/buy-2.jpg">
-                        <div>
-                            <p>Zapatillas Negras HrX</p>
-                            <small>Precio: 65.00</small>
-                            <br>
-                            <a href="">Eliminar</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$65.00</td>
-            </tr>
-
-            <tr>
-                <td>
-                     <div class="cart-info">
-                        <img src="Pictures/buy-3.jpg">
-                        <div>
-                            <p>Pantalon Gris Jogger</p>
-                            <small>Precio: 28.00</small>
-                            <br>
-                            <a href="">Eliminar</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>$28.00</td>
-            </tr>
-    </table>
-    <div class="total">
-        <table>
-            <tr>
-                <td>SubTotal</td>
-                <td>$138.00</td>
-            </tr>
-            <tr>
-                <td>Impuesto</td>
-                <td>$9.66</td>
-            </tr>
-            <tr>
-                <td>Total</td>
-                <td>$147.66</td>
-            </tr>
-        </table>
-    </div>
-    </div>
-
-  <!----------------------- Pie de pagina ------------------------>
-  <div class="pie">
+    <!-- Header remains the same -->
     <div class="container">
-        <div class="row">
-            <div class="pie-col-1">
-                <h3>Descarga Nuestra App</h3>
-                <p>App disponible para telefono Android y iOS </p>
-                <div class="app-logo">
-                    <img src="Pictures/play-store.png">
-                    <img src="Pictures/app-store.png">
-                </div>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="Pictures/logo.png" width="325px"></a>
             </div>
-            <div class="pie-col-2">
-                <img src="Pictures/logo-black.png">
-                <p>Nuestro propósito es hacer que el placer y los beneficios del deporte sean accesibles de forma sostenible para la mayorías</p>
-            </div>
-            <div class="pie-col-3">
-                <h3>Enlaces</h3>
-                <ul>
-                    <li>Cupones</li>
-                    <li>Blogs</li>
-                    <li>Política de Devoluciones</li>
-                    <li>Afiliarse</li>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="">Conocenos</a></li>
+                    <li><a href="login.html">Registrate</a></li>
                 </ul>
+            </nav>
+            <a href="carrito.html"><img src="Pictures/cart.png" width="42px" height="42px"></a>
+            <img src="Pictures/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    </div>
+
+    <!-- Cart section with dynamic content -->
+    <div class="small-container cart-page">
+        <table id="cart-table">
+            <thead>
+                <tr>
+                    <th>Productos</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unitario</th>
+                    <th>Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Items will be loaded here dynamically -->
+            </tbody>
+        </table>
+        
+        <div class="total-section">
+            <div class="total">
+                <table>
+                    <tr>
+                        <td>SubTotal:</td>
+                        <td id="subtotal">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Impuesto (16%):</td>
+                        <td id="tax">$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Total:</td>
+                        <td id="total">$0.00</td>
+                    </tr>
+                </table>
             </div>
-            <div class="pie-col-4">
-                <h3>Siguenos</h3>
-                <ul>
-                    <li>Facebook</li>
-                    <li>Twitter</li>
-                    <li>Instsgram</li>
-                    <li>YouTube</li>
-                </ul>
+            
+            <div class="checkout-buttons">
+                <button class="btn" onclick="updateCart()">Actualizar Carrito</button>
+                <button class="btn" onclick="proceedToCheckout()">Proceder al Pago</button>
             </div>
         </div>
-        <hr>
-        <p class="Copyright">Copyright 2023 - First Ecommerce website</p>
     </div>
-  </div>
-    <!------------------------ Js para menu ------------------------>
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
 
+    <!-- Footer remains the same -->
+    <div class="pie">
+        <div class="container">
+            <div class="row">
+                <div class="pie-col-1">
+                    <h3>Descarga Nuestra App</h3>
+                    <p>App disponible para telefono Android y iOS </p>
+                    <div class="app-logo">
+                        <img src="Pictures/play-store.png">
+                        <img src="Pictures/app-store.png">
+                    </div>
+                </div>
+                <div class="pie-col-2">
+                    <img src="Pictures/logo-black.png">
+                    <p>Nuestro propósito es hacer que el plaisir y los beneficios del deporte sean accesibles de forma sostenible para la mayorías</p>
+                </div>
+                <div class="pie-col-3">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li>Cupones</li>
+                        <li>Blogs</li>
+                        <li>Política de Devoluciones</li>
+                        <li>Afiliarse</li>
+                    </ul>
+                </div>
+                <div class="pie-col-4">
+                    <h3>Siguenos</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="Copyright">Copyright 2023 - First Ecommerce website</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Menu toggle functionality remains the same
+        var MenuItems = document.getElementById("MenuItems");
         MenuItems.style.maxHeight = "0px";
        
         function menutoggle(){
@@ -155,7 +125,149 @@
                 MenuItems.style.maxHeight = "0px";
             }
         }
+
+        // Cart functionality
+        let cartData = [];
+
+        // Load cart items when page loads
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadCartItems();
+            calculateTotals();
+        });
+
+        async function loadCartItems() {
+            try {
+                const token = localStorage.getItem('token');
+                
+                if (!token) {
+                    alert('Por favor inicie sesión para ver su carrito');
+                    window.location.href = 'login.html';
+                    return;
+                }
+
+                const response = await fetch('/api/cart', {
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    cartData = data.products.map(item => ({
+                        ...item.productId,
+                        quantity: item.quantity
+                    }));
+                    
+                    renderCartItems();
+                } else {
+                    alert(data.message || 'Error al cargar el carrito');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error de conexión');
+            }
+        }
+
+        function renderCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            cartData.forEach((item, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>
+                        <div class="cart-info">
+                            <img src="${item.image}" alt="${item.name}">
+                            <div>
+                                <p>${item.name}</p>
+                                <small>Precio: $${item.price.toFixed(2)}</small>
+                                <br>
+                                <a href="#" onclick="removeFromCart(${index})">Eliminar</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="number" min="1" value="${item.quantity}" 
+                               onchange="updateQuantity(${index}, this.value)">
+                    </td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>$${(item.price * item.quantity).toFixed(2)}</td>
+                    <td>
+                        <button onclick="removeFromCart(${index})" class="btn">Eliminar</button>
+                    </td>
+                `;
+                cartItemsContainer.appendChild(row);
+            });
+        }
+
+        function updateQuantity(index, newQuantity) {
+            if (newQuantity <= 0) return;
+            
+            cartData[index].quantity = parseInt(newQuantity);
+            renderCartItems();
+            calculateTotals();
+        }
+
+        function removeFromCart(index) {
+            cartData.splice(index, 1);
+            renderCartItems();
+            calculateTotals();
+        }
+
+        function calculateTotals() {
+            const subtotal = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.16; // 16% tax
+            const total = subtotal + tax;
+
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        async function updateCart() {
+            try {
+                const token = localStorage.getItem('token');
+                
+                if (!token) {
+                    alert('Por favor inicie sesión');
+                    return;
+                }
+
+                // Prepare cart data for backend
+                const cartPayload = cartData.map(item => ({
+                    productId: item._id,
+                    quantity: item.quantity
+                }));
+
+                const response = await fetch('/api/cart', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ products: cartPayload })
+                });
+
+                const data = await response.json();
+                
+                if (response.ok) {
+                    alert('Carrito actualizado exitosamente');
+                } else {
+                    alert(data.message || 'Error al actualizar el carrito');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error de conexión');
+            }
+        }
+
+        function proceedToCheckout() {
+            // Here you would typically redirect to a payment page
+            // For now, we'll just show an alert
+            alert('Redirigiendo al proceso de pago...');
+            // You could add code here to integrate with a payment gateway like Stripe
+        }
     </script>
-    
 </body>
 </html>
