@@ -419,7 +419,7 @@ th:last-child{
     width: 300px;
     height: 400px;
     position: relative;
-    text-align: center;
+    text-align: left;
     padding: 20px 0;
     margin: auto;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
@@ -427,21 +427,24 @@ th:last-child{
 }
 .form-container span{
     font-weight: bold;
-    padding: 0 10px;
+    justify-content: center;
+    padding: 3px 70px;
     color: #555;
     cursor: pointer;
     width: 100px;
-    display: inline-block;
+    display: inline-flex;
     
 }
 .form-boton{
-    display: inline-block;
+    display: inline-block;   
 }
+
+
 .form-container form{
     max-width: 300px;
     padding: 0 20px;
     position: absolute;
-    top: 130px;
+    top: 70px;
     transition: transform 1s;
 }
 form input{
@@ -456,12 +459,13 @@ form .boton{
     border: none;
     cursor: pointer;
     margin: 10px 0;
+    font-size: 12px;
 }
 form .boton:focus{
     outline:none;
 }
 #LoginForm{
-    left: -300px;
+    left: 0px;
 }
 #RegisForm{
     left: 0;
@@ -470,13 +474,22 @@ form a{
     font-size: 12px;
 }
 #Indicador{
-    width: 115px;
+    width: 150px;
     border: none;
     background: #c76e4b;
     height: 3px;
     margin-top: 8px;
     transform: translateX(100px);
     transition: transform 1s;
+}
+
+.olvide-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.olvide-link {
+  display: inline-block;         
 }
 
 
